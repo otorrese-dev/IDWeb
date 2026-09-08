@@ -1,72 +1,129 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    
-  <title>My first styled page</title>
-  <link rel="stylesheet" href="mystyle.css">
+    <meta charset="UTF-8">
+    <title>Portal de Portafolio Académico - Lab01</title>
+    <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
-        
-  body {
-        padding-left: 11em;
-      font-family: Georgia, "Times New Roman",
-          Times, serif;
-    color: purple;
-    background-color: #d8da3d }
-      ul.navbar {
+        body {
+            padding-left: 11em;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: rgb(0, 0, 0);
+            background-color: #f09199;
+        }
+        ul.navbar {
             list-style-type: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 2em;
-    left: 1em;
-    width: 9em }
-      h1 {
-    font-family: Helvetica, Geneva, Arial,
-          SunSans-Regular, sans-serif }
-          ul.navbar li {
-    background: white;
-    margin: 0.5em 0;
-    padding: 0.3em;
-    border-right: 1em solid black }
-  ul.navbar a {
-    text-decoration: none }
-  a:link {
-    color: blue }
-  a:visited {
-    color: purple }
-      address {
-    margin-top: 1em;
-    padding-top: 1em;
-    border-top: thin dotted }
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 2em;
+            left: 1em;
+            width: 9em;
+        }
+        h1 {
+            font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+        }
+        ul.navbar li {
+            background: rgb(183, 233, 255);
+            margin: 0.5em 0;
+            padding: 0.3em;
+            border-right: 1em solid black;
+        }
+        ul.navbar a {
+            text-decoration: none;
+        }
+        a:link { color: blue; }
+        a:visited { color: purple; }
+        address {
+            margin-top: 1em;
+            padding-top: 1em;
+            border-top: thin dotted;
+        }
+     
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+            background: white;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
   </style>
   
 </head>
 
 <body>
-
-<!-- Site navigation menu -->
+    
 <ul class="navbar">
-  <li><a href="index.html">Home page</a>
-  <li><a href="musings.html">Musings</a>
-  <li><a href="town.html">My town</a>
-  <li><a href="links.html">Links</a>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="author.html">Autor</a></li>
+    <li><a href="system.html">Ing. Sistemas</a></li>
+    <li><a href="w3.html">Estándares W3C</a></li>
+    <li><a href="contact.html">Contacto</a></li>
 </ul>
+<main>
+    <h1>Portal de Portafolio Académico</h1>
+    <p><strong>Curso:</strong> Introducción al Desarrollo Web | <strong>Profesor:</strong> Docente del curso | <strong>Alumno:</strong> Otorrese-dev</p>
 
-<!-- Main content -->
-<h1>My first styled page</h1>
+    <!-- Primer bloque article -->
+    <article>
+        <h2>Información General </h2>
+        </ul>
+    </article>
 
-<p>Welcome to my styled page!
+    <!-- Segundo bloque article -->
+    <article>
+        <h2>Objetivos</h2>
+        <ol>
+            <li>Construir interfaces accesibles y semánticas.</li>
+            <li>Aplicar hojas de estilo eficientes.</li>
+            <li>Desplegar código limpio en repositorios públicos.</li>
+        </ol>
+    </article>
+</main>
+<section>
+        <h2>Proyectos Académicos</h2>
+        <table summary="Tabla">
+            <thead>
+                <tr>
+                    <th scope="col">Nro</th>
+                    <th scope="col">Nombre del Proyecto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
 
-<p>It lacks images, but at least it has style.
-And it has links, even if they don't go
-anywhere&hellip;
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
 
-<p>There should be more here, but I don't know
-what yet.
+                </tr>
+            </tbody>
+        </table>
+    </section>
+<!-- Elementos multimedia exigidos -->
+    <section>
+        <h2>Multimedia del Estudiante</h2>
+        <figure>
+            <img src="img/photo1.gif" alt="Fotografía representativa del estudiante desarrollando código en el entorno de prácticas." width="200">
+            <figcaption>Figura 1:</figcaption>
+        </figure>
+    </section>
+</main>
 
-<!-- Sign and date the page, it's only polite! -->
-<address>Made 5 April 2004<br>
-  by myself.</address>
+<!-- Pie de página con información de contacto y derechos -->
+<footer>
+    <address>
+        Contacto: <a href="mailto:otorrese@unsa.edu.pe">otorrese@unsa.edu.pe</a><br>
+        &copy; 2026 Portal Académico - Todos los derechos reservados.
+    </address>
+</footer>
 
 </body>
 </html>
