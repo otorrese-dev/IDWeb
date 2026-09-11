@@ -1,0 +1,59 @@
+/* Estilos generales para todo el sitio web */
+body {
+    padding-left: 11em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: rgb(0, 0, 0);
+    background-color: #f09199;
+}
+
+/* Estilos del menú de navegación lateral estilo W3C */
+ul.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em;
+}
+
+ul.navbar li {
+    background: rgb(183, 233, 255);
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border-right: 1em solid black;
+}
+
+ul.navbar a {
+    text-decoration: none;
+}
+
+/* Tipografía de los títulos */
+h1 {
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+}
+
+/* Colores de los enlaces */
+a:link { color: blue; }
+a:visited { color: purple; }
+
+/* Estilo del pie de página */
+address {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted;
+}
+
+/* Estilos de tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    background: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
