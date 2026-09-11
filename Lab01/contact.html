@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Portal Académico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos rápidos específicos para que el formulario se vea ordenado */
+        form {
+            background: white;
+            padding: 1.5em;
+            border-radius: 5px;
+            border: 1px solid black;
+            max-width: 500px;
+            margin-top: 1em;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.3em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: rgb(183, 233, 255);
+            border: 1px solid black;
+            padding: 0.5em 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="navbar">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="author.html">Autor</a></li>
+    <li><a href="system.html">Ing. Sistemas</a></li>
+    <li><a href="w3.html">Estándares W3C</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+</ul>
+
+<main>
+    <h1>Contacto</h1>
+    <p>¿Tienes alguna duda o comentario sobre este portafolio? Envía un mensaje a través del siguiente formulario básico:</p>
+
+    <!-- Formulario básico no funcional requerido por la guía -->
+    <form action="#" method="POST">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+        
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="correo@unsa.edu.pe" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+</main>
+
+<footer>
+    <address>
+        Contacto directo: <a href="mailto:otorrese@unsa.edu.pe">otorrese@unsa.edu.pe</a><br>
+        &copy; 2026 Portal Académico - Todos los derechos reservados.
+    </address>
+</footer>
+
+</body>
+</html>
