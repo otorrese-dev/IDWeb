@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box; /* Obliga a que padding y border no aumenten el tamaño final */
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9; /* Fondo gris claro */
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 15px; /* Separa este bloque del siguiente */
+    width: 100%;
+    max-width: 400px; /* Impide que el input sea ridículamente ancho */
+}
+.form-label {
+    display: block; /* Obliga a la etiqueta a tomar toda la línea superior */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+.form-input {
+    width: 100%;
+    padding: 10px 12px; /* Relleno interno cómodo para escribir */
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+    font-size: 14px;
+    transition: border-color 0.3s; /* Transición suave de color */
+}
+
+/* Estado cuando haces clic en la casilla */
+.form-input:focus {
+    border-color: #3182ce; /* Borde azul */
+    outline: none; /* Quita el borde nativo del navegador */
+    box-shadow: 0 0 5px rgba(49, 130, 206, 0.5); /* Sombra difuminada azul */
+}

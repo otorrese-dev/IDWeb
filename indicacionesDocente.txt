@@ -1,6 +1,0 @@
-stateholder
-recuaet
-diferemtes estilos
-
-interna: propia del html
-externa: derivada del estilo 
