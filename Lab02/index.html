@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestion Academica </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Tarjeta Principal -->
+    <main class="formulario">
+        
+        <!-- Cabecera -->
+        <header>
+            <h1>Sistema de Gestión Académica</h1>
+        </header>
+
+        <!-- Formulario -->
+        <form action="#" method="POST">
+            
+            <!-- Grupo / Bloque 1 -->
+            <fieldset>
+                <legend>Informacion Personal</legend>
+                <!-- Estructura de un Campo Individual -->
+                <div class="inf-personal">
+                        <label 
+                        for="nombres">Nombres Completos: </label>
+                        <input 
+                        type="text" 
+                        id="nombres" 
+                        name="nombres" 
+                        required title="Nombres completos necesarios">
+                </div>
+
+                <div class="inf-personal">
+                    <label 
+                    for="apellidos">Apellidos Completos: </label>
+                    <input type="text" 
+                    id="apellidos" 
+                    name="apellidos" 
+                    required 
+                    title="Apellidos completos necesarios">
+                </div>
+
+                <div class="inf-personal">
+                    <label 
+                    for="cui">CUI: </label>
+                    <input type="text" 
+                    id="cui" 
+                    name="cui" 
+                    pattern="[0-9]{8}" 
+                    maxlength="8"
+                    placeholder="Año de ingreso + XXXX"
+                    required 
+                    title="CUI necesario">
+                </div>
+
+                <div class="inf-personal">
+                    <label 
+                    for="fechaNacimiento">Fecha de Nacimiento: </label>
+                    <input type="date" 
+                    id="fechaNacimiento" 
+                    name="fechaNacimiento" 
+                    min="1900-01-01"
+                    max="2008-12-31"
+                    required 
+                    title="Fecha de nacimiento necesaria">
+                </div>
+            </fieldset>
+
+
+            <!-- Grupo / Bloque 2 -->
+            <fieldset>
+                <legend>Informacion Academica</legend>
+                <div class="inf-academica">
+                    <label 
+                    for="correoInstitucional">Correo Institucional: </label>
+
+                    <input type="email" 
+                    id="correoInstitucional" 
+                    name="correoInstitucional" 
+                    placeholder="estudiante@universidad.edu.pe"
+                    required 
+                    pattern="[a-zA-Z0-9._%+-]+@universidad\.edu\.pe"
+                    title="Correo institucional necesario">
+                </div>
+                
+                <div class="inf-academica">
+                    <label 
+                    for="contraseñaCorreo">Contraseña: </label>
+
+                    <input type="password" 
+                    id="contraseñaCorreo" 
+                    name="contraseñaCorreo" 
+                    placeholder="Contraseña del correo institucional"
+                    required 
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Contraseña de al menos 8 caracteres necesaria">
+                </div>
+
+                <div class="inf-academica">
+                    <label for="ciclo">Número de Ciclo: </label>
+                    <input type="number" 
+                        id="ciclo" 
+                        name="ciclo" 
+                        min="1" 
+                        max="12" 
+                        placeholder="Ej. 1" 
+                        required 
+                        title="Ingrese su ciclo actual (1-12)">
+                </div>
+
+
+                <div class="inf-academica">
+                    <label 
+                    for="carreraProfesional">Carrera Profesional: </label>
+
+                    <select 
+                    id="carreraProfesional" 
+                    name="carreraProfesional" 
+                    required title="Carrera profesional necesaria">
+                        <option value="">Seleccione una carrera</option>
+                        <option value="Ingenieria de Sistemas">Ingenieria de Sistemas</option>
+                        <option value="Medicina">Medicina</option>
+                        <option value="Derecho">Derecho</option>
+                        <option value="Arquitectura">Arquitectura</option>
+                    </select>
+                </div>
+        
+                <div class="inf-academica">
+                    <label>Turno: </label>
+                    
+                    <input type="radio"
+                    id="turnoMañana"
+                    name="turno"
+                    value="Mañana"
+                    required title="Turno necesario">
+                    <label for="turnoMañana">Mañana</label>
+
+                    <input type="radio"
+                    id="turnoTarde"
+                    name="turno"
+                    value="Tarde"
+                    required title="Turno necesario">
+                    <label for="turnoTarde">Tarde</label>
+                </div>
+                
+                <div class="inf-academica">
+                    <label for="comentarios">Comentarios adicionales:</label>
+                    
+                    <textarea 
+                        id="comentarios" 
+                        name="comentarios" 
+                        placeholder="Comentarios adicionales">
+                    </textarea>
+                </div>
+                                
+                <div>
+                    <input type="checkbox" id="TyC" name="TyC" required>
+                    <label for="TyC">Acepto los términos y condiciones</label>
+                </div>
+
+
+            </fieldset>
+
+
+            <!-- Botón de Envío -->
+            <button type="submit">Enviar</button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
