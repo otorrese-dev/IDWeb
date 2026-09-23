@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport obligatorio para Mobile First -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Resuelto - Lab 03</title>
+    
+    <!-- CDN CSS Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Enlace a tu CSS Nativo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Integración de Navbar de Bootstrap 5 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portal Académico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ejemplo de prueba para ver la rejilla (.card-grid) funcionando -->
+    <main class="container my-4">
+        <div class="card-grid">
+            <div class="card p-3 shadow-sm">Tarjeta 1</div>
+            <div class="card p-3 shadow-sm">Tarjeta 2</div>
+            <div class="card p-3 shadow-sm">Tarjeta 3</div>
+        </div>
+    </main>
+
+    <!-- CDN JavaScript de Bootstrap 5 (Requerido para el menú colapsable) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
