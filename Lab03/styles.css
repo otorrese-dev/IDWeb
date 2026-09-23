@@ -1,0 +1,145 @@
+/* 1. CONFIGURACION BASICA*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #942e2e;
+    background-color: #f8f9fa;
+}
+
+/* 2. SECCIÓN HERO: FLEXBOX NATIVO - MOBILE FIRST*/
+.hero-section {
+    background-color: #eef2f7;
+    padding: 3rem 1.5rem;
+}
+
+/* Contenedor Flexbox en columna  */
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ce4469;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Botón decorado del Hero */
+.btn-hero {
+    display: inline-block;
+    padding: 0.75rem 1.8rem;
+    background-color: #cf4545;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-hero:hover {
+    background-color: #d70b0b;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Control para que la imagen NO se desborde */
+.hero-img {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+/* Media Query: Escritorio (Desktop >= 768px) */
+@media (min-width: 768px) {
+    .hero-container {
+        flex-direction: row; /* Texto a la izquierda, imagen a la derecha */
+        text-align: left;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* 3. CATÁLOGO DE CURSOS (CSS GRID NATIVO)*/
+/* Grilla adaptable con minmax y auto-fit */
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-top: 1.5rem;
+}
+
+/* Estilo de Tarjetas del Grid */
+.curso-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+    border-color: #df5858;
+}
+
+.curso-card h3 {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+}
+
+.curso-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.curso-card .badge {
+    align-self: flex-start;
+    padding: 0.5em 0.8em;
+    font-size: 0.8rem;
+}
