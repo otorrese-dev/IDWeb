@@ -1,4 +1,4 @@
-/* 1. CONFIGURACION BASICA*/
+/* Configuración básica y reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,20 +7,19 @@
 
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    color: #942e2e;
+    color: #212529;
     background-color: #f8f9fa;
 }
 
-/* 2. SECCIÓN HERO: FLEXBOX NATIVO - MOBILE FIRST*/
+/* Sección de inicio / Hero (Flexbox Mobile-First) */
 .hero-section {
     background-color: #eef2f7;
-    padding: 3rem 1.5rem;
+    padding: 3.5rem 1.5rem;
 }
 
-/* Contenedor Flexbox en columna  */
 .hero-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Apilado vertical para móviles */
     align-items: center;
     gap: 2rem;
     max-width: 1200px;
@@ -35,36 +34,37 @@ body {
 .hero-text h1 {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #ce4469;
+    color: #0d6efd;
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .hero-text p {
     font-size: 1.1rem;
-    color: #555;
+    color: #495057;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
-/* Botón decorado del Hero */
 .btn-hero {
     display: inline-block;
     padding: 0.75rem 1.8rem;
-    background-color: #cf4545;
+    background-color: #0d6efd;
     color: #ffffff;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.25);
 }
 
 .btn-hero:hover {
-    background-color: #d70b0b;
+    background-color: #0b5ed7;
     color: #ffffff;
     transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.35);
 }
 
-/* Control para que la imagen NO se desborde */
 .hero-img {
     flex: 1;
     width: 100%;
@@ -77,14 +77,14 @@ body {
     max-width: 550px;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     object-fit: cover;
 }
 
-/* Media Query: Escritorio (Desktop >= 768px) */
+/* Cambia a diseño horizontal en pantallas grandes */
 @media (min-width: 768px) {
     .hero-container {
-        flex-direction: row; /* Texto a la izquierda, imagen a la derecha */
+        flex-direction: row; /* Texto a la izquierda e imagen a la derecha */
         text-align: left;
     }
 
@@ -97,16 +97,15 @@ body {
     }
 }
 
-/* 3. CATÁLOGO DE CURSOS (CSS GRID NATIVO)*/
-/* Grilla adaptable con minmax y auto-fit */
+/* Sección Cursos (CSS Grid Nativo) */
 .cursos-grid {
     display: grid;
+    /* Adapta el número de columnas automáticamente al ancho de pantalla */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.8rem;
     margin-top: 1.5rem;
 }
 
-/* Estilo de Tarjetas del Grid */
 .curso-card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -116,24 +115,25 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .curso-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
-    border-color: #df5858;
+    border-color: #0d6efd;
 }
 
 .curso-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 0.8rem;
 }
 
 .curso-card p {
     font-size: 0.95rem;
-    color: #666;
+    color: #6c757d;
     line-height: 1.5;
     margin-bottom: 1.2rem;
 }
