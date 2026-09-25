@@ -14,28 +14,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    
+    <!-- BARRA DE NAVEGACION con BOOTSTRAP -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
         <div class="container-fluid container-lg">
-            <a class="navbar-brand fw-bold" href="#">Portal Académico</a>
-            
-            
+            <a class="navbar-brand fw-bold" 
+            href="#">Portal Académico</a>      
+            <!-- Boton expandible "Boton hamburguesa" -->
             <button class="navbar-toggler" 
-            type="button" data-bs-toggle="collapse" 
+            type="button" 
+            data-bs-toggle="collapse" 
             data-bs-target="#navbarNav" 
             aria-controls="navbarNav" 
             aria-expanded="false" 
             aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+            <!-- Elementos de la barra de navegación -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
                 </ul>
-
+                <!-- Botones "Iniciar Sesion" y "Registrarse" -->
                 <div class="d-flex gap-2 pt-2 pt-lg-0">
                     <button class="btn btn-outline-light btn-sm w-100 w-lg-auto" 
                     type="button">Iniciar Sesión</button>
@@ -46,7 +48,7 @@
         </div>
     </nav>
 
-    <!-- 2. SECCIÓN PRINCIPAL / HERO SECTION (Flexbox Nativo) -->
+    <!-- INICIO / SECCION PRINCIPAL CON HERO SECTION (Flexbox CSS Nativo) -->
     <header id="inicio" class="hero-section">
         <div class="hero-container">
             <div class="hero-text">
@@ -64,7 +66,7 @@
         </div>
     </header>
 
-    <!-- 3. CATÁLOGO DE CURSOS OFERTADOS (CSS Grid Nativo) -->
+    <!-- CURSOS / CATALOGO CON CSS Grid Nativo -->
     <section id="cursos" class="container py-5">
         <h2 class="text-center mb-4 text-primary fw-bold">Catálogo de Cursos Ofertados</h2>
         
@@ -72,14 +74,14 @@
         <div class="cursos-grid">
             
             <article class="curso-card">
-                <h3>Desarrollo Web Integrado</h3>
+                <h3>Introduccion al Desarrollo Web</h3>
                 <p>Aprende HTML5, CSS3, Flexbox, CSS Grid y Bootstrap 5 para crear interfaces modernas.</p>
                 <span class="badge bg-primary">Sistemas</span>
             </article>
 
             <article class="curso-card">
-                <h3>Estructura de Datos</h3>
-                <p>Implementación de listas enlazadas, árboles, grafos y algoritmos de búsqueda eficientes.</p>
+                <h3>Desarrollo de Software Orientado a Objetos</h3>
+                <p>Implementación de listas, arreglos y metodos con objetos y sus atributos.</p>
                 <span class="badge bg-primary">Sistemas</span>
             </article>
 
@@ -90,7 +92,7 @@
             </article>
 
             <article class="curso-card">
-                <h3>Estructuras Discretas</h3>
+                <h3>Estructuras Discretas II</h3>
                 <p>Teoría de grafos, relaciones de recurrencia, álgebra de Boole y lógica matemática.</p>
                 <span class="badge bg-primary">Sistemas</span>
             </article>
@@ -110,7 +112,7 @@
         </div>
     </section>
 
-    <!-- 4. MÓDULO DE NOTICIAS Y EVENTOS (Bootstrap Grid + Cards + Modal) -->
+    <!-- NOTICIAS Y EVENTOS (Bootstrap Grid + Cards + Modal) -->
     <section id="noticias" class="bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-4 text-dark fw-bold">Noticias y Eventos Académicos</h2>
@@ -124,9 +126,14 @@
                         <div class="card-body d-flex flex-column">
                             <span class="badge bg-danger mb-2 w-auto align-self-start">Importante</span>
                             <h5 class="card-title text-primary fw-bold">Proceso de Matrícula 2026-II</h5>
-                            <p class="card-text text-muted">Revisa las fechas clave, la asignación de turnos y los requisitos para el registro de asignaturas.</p>
-                            <!-- Botón que activa el Modal -->
-                            <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#noticiaModal1">
+                            <p class="card-text text-muted">
+                                Revisa las fechas clave, la asignación de turnos y los requisitos para el registro de asignaturas.
+                            </p>
+                            <!-- Botón Modal -->
+                            <button type="button" 
+                                    class="btn btn-outline-primary mt-auto" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#noticiaModal1">
                                 Ver Detalle
                             </button>
                         </div>
@@ -139,8 +146,13 @@
                         <div class="card-body d-flex flex-column">
                             <span class="badge bg-success mb-2 w-auto align-self-start">Evento</span>
                             <h5 class="card-title text-primary fw-bold">Feria de Proyectos de Software</h5>
-                            <p class="card-text text-muted">Exposición interactiva de proyectos e investigaciones desarrolladas por estudiantes del semestre.</p>
-                            <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#noticiaModal2">
+                            <p class="card-text text-muted">
+                                Exposición interactiva de proyectos e investigaciones desarrolladas por estudiantes del semestre.
+                            </p>
+                            <button type="button" 
+                                    class="btn btn-outline-primary mt-auto" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#noticiaModal2">
                                 Ver Detalle
                             </button>
                         </div>
@@ -153,8 +165,13 @@
                         <div class="card-body d-flex flex-column">
                             <span class="badge bg-info text-dark mb-2 w-auto align-self-start">Conferencia</span>
                             <h5 class="card-title text-primary fw-bold">Seminario de Optimización e IA</h5>
-                            <p class="card-text text-muted">Charlas sobre algoritmos de búsqueda, grafos y aplicaciones prácticas en la industria actual.</p>
-                            <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#noticiaModal3">
+                            <p class="card-text text-muted">
+                                Charlas sobre algoritmos de búsqueda, grafos y aplicaciones prácticas en la industria actual.
+                            </p>
+                            <button type="button" 
+                                    class="btn btn-outline-primary mt-auto" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#noticiaModal3">
                                 Ver Detalle
                             </button>
                         </div>
@@ -165,7 +182,7 @@
         </div>
     </section>
 
-    <!-- VENTANAS MODALES DE BOOTSTRAP (Se muestran al hacer clic en "Ver Detalle") -->
+    <!-- Ventanas de modal -->
     
     <!-- Modal 1 -->
     <div class="modal fade" id="noticiaModal1" tabindex="-1" aria-labelledby="noticiaModal1Label" aria-hidden="true">
