@@ -19,7 +19,7 @@ body {
 
 .hero-container {
     display: flex;
-    flex-direction: column; /* Apilado vertical para móviles */
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
     max-width: 1200px;
@@ -81,10 +81,10 @@ body {
     object-fit: cover;
 }
 
-/* Cambia a diseño horizontal en pantallas grandes */
+/* Diseño horizontal en pantallas grandes */
 @media (min-width: 768px) {
     .hero-container {
-        flex-direction: row; /* Texto a la izquierda e imagen a la derecha */
+        flex-direction: row; 
         text-align: left;
     }
 
