@@ -8,7 +8,7 @@
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     color: #212529;
-    background-color: #f8f9fa;
+    background-color: #f8faf9;
 }
 
 /* Sección de inicio / Hero (Flexbox Mobile-First) */
@@ -49,17 +49,16 @@ body {
 .btn-hero {
     display: inline-block;
     padding: 0.75rem 1.8rem;
-    background-color: #0d6efd;
+    background-color: #2f80b6;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 6px;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 10px rgba(13, 110, 253, 0.25);
 }
 
 .btn-hero:hover {
-    background-color: #0b5ed7;
+    background-color: #c91e1e;
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(13, 110, 253, 0.35);
@@ -76,7 +75,7 @@ body {
     width: 100%;
     max-width: 550px;
     height: auto;
-    border-radius: 12px;
+    border-radius: 1px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     object-fit: cover;
 }
@@ -107,9 +106,9 @@ body {
 }
 
 .curso-card {
-    background-color: #ffffff;
+    background-color: #90d7e0;
     border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     display: flex;
