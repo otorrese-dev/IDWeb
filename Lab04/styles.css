@@ -1,0 +1,11 @@
+/* Transición suave para las tarjetas al agregarlas o filtrarlas */
+.card {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Estilo para las tareas completadas */
+.tarea-completada {
+    text-decoration: line-through !important;
+    color: #6c757d !important;
+    opacity: 0.65 !important;
+}
