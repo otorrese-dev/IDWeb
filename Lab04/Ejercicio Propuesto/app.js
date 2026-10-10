@@ -63,19 +63,19 @@ function renderizarTareas() {
     // 5.3 Recorremos con .forEach() e inyectamos cada tarjeta
     tareasFiltradas.forEach(tarea => {
         const tarjeta = document.createElement('div');
-        tarjeta.className = `card shadow-sm border-${tarea.completada ? 'success' : 'light'}`;
+        tarjeta.className = `card shadow-sm mb-3 ${tarea.completada ? 'bg-light text-muted' : 'bg-white'}`;
 
         tarjeta.innerHTML = `
             <div class="card-body d-flex justify-content-between align-items-center">
                 <div>
-                    <h5 class="card-title mb-1 ${tarea.completada ? 'tarea-completada' : ''}">
-                    ${tarea.titulo}
+                    <h5 class="card-title mb-1 ${tarea.completada ? 'text-decoration-line-through text-secondary' : 'text-dark'}">
+                        ${tarea.titulo}
                     </h5>
-                    <h6 class="card-subtitle mb-2 text-muted small">
+                    <h6 class="card-subtitle mb-2 text-primary small fw-normal">
                         Curso: ${tarea.curso}
                     </h6>
                     <p class="card-text mb-0 small text-secondary">
-                        Fecha límite: ${tarea.fechaEntrega}
+                        Fecha límite: <span class="text-danger">${tarea.fechaEntrega}</span>
                     </p>
                 </div>
                 <div class="d-flex gap-2">
