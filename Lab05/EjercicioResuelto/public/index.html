@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor HTTP Básico</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
+        h1 { color: #333; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #007BFF; color: white; border: none; border-radius: 5px; }
+        button:hover { background-color: #0056b3; }
+        pre { background: #fff; padding: 15px; display: inline-block; text-align: left; border: 1px solid #ccc; border-radius: 5px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Escuela Profesional de Ingeniería de Sistemas</h1>
+    <p>Servidor HTTP básico funcionando correctamente con Node.js</p>
+    
+    <button onclick="consultarEstado()">Consultar Estado (/api/status)</button>
+    <br>
+    <pre id="resultado">Haz clic en el botón para ver la respuesta de la API...</pre>
+
+    <script>
+        async function consultarEstado() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                document.getElementById('resultado').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('resultado').textContent = 'Error al conectar con el servidor.';
+            }
+        }
+    </script>
+</body>
+</html>
