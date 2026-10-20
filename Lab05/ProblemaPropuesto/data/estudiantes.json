@@ -5,10 +5,10 @@
     "codigo": "20260001",
     "carrera": "Ingeniería de Sistemas"
   },
-  {
-    "id": 2,
-    "nombre": "Ana López",
-    "codigo": "20260002",
-    "carrera": "Ingeniería de Sistemas"
-  }
+  {     
+    "id": 2,     
+    "nombre": "Christopher Vásquez",     
+    "codigo": "20260002",     
+    "carrera": "Ingeniería de Sistemas"   
+  } 
 ]
